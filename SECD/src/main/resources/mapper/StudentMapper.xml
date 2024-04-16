@@ -2,43 +2,4 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.secd.mapper.StudentMapper">
 
-    <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.secd.entity.Student">
-        <id column="StudentID" property="StudentID" />
-        <result column="Name" property="Name" />
-        <result column="Gender" property="Gender" />
-        <result column="Address" property="Address" />
-        <result column="PhoneNumber" property="PhoneNumber" />
-        <result column="DateOfBirth" property="DateOfBirth" />
-        <result column="EnrollmentYear" property="EnrollmentYear" />
-        <result column="ClassID" property="ClassID" />
-        <result column="SchoolType" property="SchoolType" />
-        <result column="ScholarshipType" property="ScholarshipType" />
-        <result column="ExtraWork" property="ExtraWork" />
-        <result column="Activities" property="Activities" />
-        <result column="Partner" property="Partner" />
-        <result column="Salary" property="Salary" />
-        <result column="TravelMode" property="TravelMode" />
-        <result column="Accommodation" property="Accommodation" />
-        <result column="MotherEducation" property="MotherEducation" />
-        <result column="FatherEducation" property="FatherEducation" />
-        <result column="SiblingNumber" property="SiblingNumber" />
-        <result column="ParentStatus" property="ParentStatus" />
-        <result column="MotherCareer" property="MotherCareer" />
-        <result column="FatherCareer" property="FatherCareer" />
-        <result column="WeeklyStudy" property="WeeklyStudy" />
-        <result column="ReadExtra" property="ReadExtra" />
-        <result column="ReadScience" property="ReadScience" />
-        <result column="Seminar" property="Seminar" />
-        <result column="AttendClass" property="AttendClass" />
-        <result column="ReviewMethods1" property="ReviewMethods1" />
-        <result column="ReviewMethods2" property="ReviewMethods2" />
-        <result column="TakeNotes" property="TakeNotes" />
-        <result column="ListenInClass" property="ListenInClass" />
-        <result column="FlippedCourse" property="FlippedCourse" />
-        <result column="GPALastSemester" property="GPALastSemester" />
-        <result column="GPAAtGraduation" property="GPAAtGraduation" />
-        <result column="UserType" property="UserType" />
-    </resultMap>
-
 </mapper>

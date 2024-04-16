@@ -2,12 +2,4 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.secd.mapper.TcMapper">
 
-    <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.secd.entity.Tc">
-        <id column="TeacherID" property="TeacherID" />
-        <result column="CourseID" property="CourseID" />
-        <result column="ClassTime" property="ClassTime" />
-        <result column="ClassroomID" property="ClassroomID" />
-    </resultMap>
-
 </mapper>
