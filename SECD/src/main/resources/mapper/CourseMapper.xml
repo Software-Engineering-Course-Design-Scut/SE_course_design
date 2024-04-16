@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.secd.mapper.CourseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.secd.entity.Course">
+        <id column="CourseID" property="CourseID" />
+        <result column="CourseName" property="CourseName" />
+        <result column="CourseType" property="CourseType" />
+        <result column="AssessmentMethod" property="AssessmentMethod" />
+        <result column="WeeklyHours" property="WeeklyHours" />
+        <result column="TheoreticalHours" property="TheoreticalHours" />
+        <result column="LabHours" property="LabHours" />
+        <result column="Credits" property="Credits" />
+    </resultMap>
+
+</mapper>

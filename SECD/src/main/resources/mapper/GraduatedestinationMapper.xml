@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.secd.mapper.GraduatedestinationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.secd.entity.Graduatedestination">
+        <id column="GraduateDestinationID" property="GraduateDestinationID" />
+        <result column="StudentID" property="StudentID" />
+        <result column="DestinationType" property="DestinationType" />
+        <result column="IndustryType" property="IndustryType" />
+        <result column="Company" property="Company" />
+        <result column="Details" property="Details" />
+    </resultMap>
+
+</mapper>
