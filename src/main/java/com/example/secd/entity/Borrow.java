@@ -29,9 +29,9 @@ public class Borrow implements Serializable {
 
     private String bookName;
 
-    private LocalTime borrowTime;
+    private String borrowTime;
 
-    private LocalTime returnTime;
+    private String returnTime;
 
 
 }

@@ -1,5 +1,6 @@
 package com.example.secd.service;
 
+import com.example.secd.Result;
 import com.example.secd.entity.Book;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IBookService extends IService<Book> {
 
+    Result point();
+
+    Result specific(Integer id);
+
+
+    Result add(Book book);
 }

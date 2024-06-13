@@ -15,4 +15,6 @@ public interface IScService extends IService<Sc> {
     Result point();
 
     Result specific(Integer id);
+
+    Result add(Sc sc);
 }

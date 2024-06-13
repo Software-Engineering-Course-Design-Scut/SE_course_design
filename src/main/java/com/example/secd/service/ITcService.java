@@ -15,4 +15,6 @@ public interface ITcService extends IService<Tc> {
     Result point();
 
     Result specific(Integer id);
+
+    Result add(Tc tc);
 }

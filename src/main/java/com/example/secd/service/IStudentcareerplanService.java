@@ -15,4 +15,6 @@ public interface IStudentcareerplanService extends IService<Studentcareerplan> {
     Result point();
 
     Result specific(Integer id);
+
+    Result add(Studentcareerplan studentcareerplan);
 }

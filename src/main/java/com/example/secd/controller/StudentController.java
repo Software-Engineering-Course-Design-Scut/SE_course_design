@@ -31,7 +31,7 @@ public class StudentController {
     }
 
     @GetMapping("/specific")// 绩效类的能力分返回
-    public Result specific(@RequestParam("id") Integer id
+    public Result specific(@RequestParam("studentid") Integer id
     ){
         return studentService.specific(id);
     }

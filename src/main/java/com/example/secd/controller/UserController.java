@@ -1,13 +1,11 @@
 package com.example.secd.controller;
 
 
+import com.example.secd.entity.User;
 import com.example.secd.service.IClassroomService;
 import com.example.secd.service.IUserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import com.example.secd.Result;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import com.example.secd.Result;
@@ -30,8 +28,21 @@ public class UserController {
         return userService.point();
     }
     @GetMapping("/specific")// 绩效类的能力分返回
-    public Result specific(@RequestParam("id") Integer id
+    public Result specific(@RequestParam("userid") Integer id
     ){
         return userService.specific(id);
+    }
+
+    @PostMapping("/add")
+    public Result add(@RequestParam("userid") Integer userid,
+                      @RequestParam(value = "name") String name,
+                      @RequestParam(value = "usertype") Integer usertype,
+                      @RequestParam(value = "password") String password) {
+        User user = new User();
+        user.setUserID(userid);
+        user.setName(name);
+        user.setUserType(usertype);
+        user.setPassword(password);
+        return userService.add(user);
     }
 }

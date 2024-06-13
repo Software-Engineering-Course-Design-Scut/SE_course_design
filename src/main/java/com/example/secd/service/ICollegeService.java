@@ -13,4 +13,6 @@ import com.example.secd.Result;
  */
 public interface ICollegeService extends IService<College> {
     Result point();
+
+    Result add(College college);
 }

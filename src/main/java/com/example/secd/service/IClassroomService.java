@@ -16,4 +16,5 @@ public interface IClassroomService extends IService<Classroom> {
     Result point();
 
 
+    Result add(Classroom classroom);
 }

@@ -1,13 +1,12 @@
 package com.example.secd.controller;
 
 
+import com.example.secd.entity.Borrow;
+import com.example.secd.entity.Studentcareerplan;
 import com.example.secd.service.IClassroomService;
 import com.example.secd.service.IStudentcareerplanService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import com.example.secd.Result;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import com.example.secd.Result;
@@ -31,8 +30,18 @@ public class StudentcareerplanController {
     }
 
     @GetMapping("/specific")// 绩效类的能力分返回
-    public Result specific(@RequestParam("id") Integer id
+    public Result specific(@RequestParam("studentid") Integer id
     ){
         return studentcareerplanService.specific(id);
+    }
+    @PostMapping("/add")
+    public Result add(@RequestParam("studentcareerplanid") Integer studentcareerplanid,
+                      @RequestParam(value = "studentid") Integer studentid,
+                      @RequestParam(value = "careerplanadvice") String careerplanadvice) {
+        Studentcareerplan studentcareerplan = new Studentcareerplan();
+        studentcareerplan.setStudentCareerPlanID(studentcareerplanid);
+        studentcareerplan.setStudentID(studentid);
+        studentcareerplan.setCareerPlanAdvice(careerplanadvice);
+        return studentcareerplanService.add(studentcareerplan);
     }
 }

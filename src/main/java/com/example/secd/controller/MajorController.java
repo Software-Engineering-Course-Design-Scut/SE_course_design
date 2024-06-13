@@ -1,12 +1,11 @@
 package com.example.secd.controller;
 
 
+import com.example.secd.entity.Borrow;
+import com.example.secd.entity.Major;
 import com.example.secd.service.IClassroomService;
 import com.example.secd.service.IMajorService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import com.example.secd.Result;
@@ -27,5 +26,15 @@ public class MajorController {
     public Result information(
     ){
         return majorService.point();
+    }
+    @PostMapping("/add")
+    public Result add(@RequestParam("majorid") Integer majorid,
+                      @RequestParam(value = "majorname") String majorname,
+                      @RequestParam(value = "collegeid") Integer collegeid) {
+        Major major = new Major();
+        major.setMajorID(majorid);
+        major.setMajorName(majorname);
+        major.setCollegeID(collegeid);
+        return majorService.add(major);
     }
 }

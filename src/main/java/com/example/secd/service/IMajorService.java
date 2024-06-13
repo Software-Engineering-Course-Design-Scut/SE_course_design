@@ -13,4 +13,6 @@ import com.example.secd.Result;
  */
 public interface IMajorService extends IService<Major> {
     Result point();
+
+    Result add(Major major);
 }

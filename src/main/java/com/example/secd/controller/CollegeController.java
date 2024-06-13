@@ -1,12 +1,11 @@
 package com.example.secd.controller;
 
 
+import com.example.secd.entity.Classroom;
+import com.example.secd.entity.College;
 import com.example.secd.service.IClassroomService;
 import com.example.secd.service.ICollegeService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import com.example.secd.Result;
@@ -27,5 +26,14 @@ public class CollegeController {
     public Result information(
     ){
         return collegeService.point();
+    }
+
+    @PostMapping("/add")
+    public Result add(@RequestParam("collegeid") Integer collegeid,
+                      @RequestParam(value = "collegename") String collegename) {
+        College college = new College();
+        college.setCollegeID(collegeid);
+        college.setCollegeName(collegename);
+        return collegeService.add(college);
     }
 }

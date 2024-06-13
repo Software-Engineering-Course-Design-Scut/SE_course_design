@@ -13,4 +13,6 @@ import com.example.secd.Result;
  */
 public interface IClassService extends IService<Class> {
     Result point();
+
+    Result add(Class aclass);
 }

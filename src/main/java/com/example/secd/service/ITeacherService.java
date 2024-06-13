@@ -15,4 +15,6 @@ public interface ITeacherService extends IService<Teacher> {
     Result point();
 
     Result specific(Integer id);
+
+    Result add(Teacher teacher);
 }

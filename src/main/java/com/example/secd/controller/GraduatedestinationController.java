@@ -1,12 +1,11 @@
 package com.example.secd.controller;
 
 
+import com.example.secd.entity.Course;
+import com.example.secd.entity.Graduatedestination;
 import com.example.secd.service.IClassroomService;
 import com.example.secd.service.IGraduatedestinationService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import com.example.secd.Result;
@@ -27,5 +26,24 @@ public class GraduatedestinationController {
     public Result information(
     ){
         return graduatedestinationService.point();
+    }
+    @PostMapping("/add")
+    public Result add(@RequestParam("graduatedestinationid") Integer graduatedestinationid,
+                      @RequestParam(value = "studentid") Integer studentid,
+                      @RequestParam(value = "destinationtype") String destinationtype,
+                      @RequestParam(value = "industrytype") Integer industrytype,
+                      @RequestParam(value = "company") String company,
+                      @RequestParam(value = "details") String details
+    ) {
+        Graduatedestination graduatedestination = new Graduatedestination();
+        graduatedestination.setGraduateDestinationID(graduatedestinationid);
+        graduatedestination.setStudentID(studentid);
+        graduatedestination.setDestinationType(destinationtype);
+        graduatedestination.setIndustryType(industrytype);
+        graduatedestination.setCompany(company);
+        graduatedestination.setDetails(details);
+
+
+        return graduatedestinationService.add(graduatedestination);
     }
 }

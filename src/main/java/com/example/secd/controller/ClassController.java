@@ -1,13 +1,12 @@
 package com.example.secd.controller;
 
 
+import com.example.secd.entity.Book;
+import com.example.secd.entity.Class;
 import com.example.secd.service.IClassService;
 import com.example.secd.service.IClassroomService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import com.example.secd.Result;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -29,5 +28,15 @@ public class ClassController {
     public Result information(
     ){
         return classService.point();
+    }
+    @PostMapping("/add")
+    public Result add(@RequestParam("classid") Integer classid,
+                      @RequestParam(value = "classname") String classname,
+                      @RequestParam(value = "majorid") Integer majorid) {
+        Class aclass = new Class();
+        aclass.setClassID(classid);
+        aclass.setClassName(classname);
+        aclass.setMajorID(majorid);
+        return classService.add(aclass);
     }
 }

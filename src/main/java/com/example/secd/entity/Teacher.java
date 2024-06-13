@@ -55,7 +55,7 @@ public class Teacher implements Serializable {
      * 出生日期
      */
     @TableField("DateOfBirth")
-    private LocalDate DateOfBirth;
+    private String DateOfBirth;
 
     /**
      * 学历
@@ -73,7 +73,7 @@ public class Teacher implements Serializable {
      * 入职时间
      */
     @TableField("HireDate")
-    private LocalDate HireDate;
+    private String HireDate;
 
     /**
      * 学院ID
