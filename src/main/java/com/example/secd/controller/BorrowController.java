@@ -48,4 +48,8 @@ public class BorrowController {
         borrow.setReturnTime(returntime);
         return borrowService.add(borrow);
     }
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("id") Integer id) {
+        return borrowService.delete(id);
+    }
 }

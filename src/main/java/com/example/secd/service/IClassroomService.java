@@ -17,4 +17,6 @@ public interface IClassroomService extends IService<Classroom> {
 
 
     Result add(Classroom classroom);
+
+    Result delete(Integer id);
 }

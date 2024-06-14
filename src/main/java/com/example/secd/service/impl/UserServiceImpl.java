@@ -58,4 +58,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             return Result.fail("书籍添加失败");
         }
     }
+
+    @Override
+    public Result delete(Integer id) {
+        return null;
+    }
 }

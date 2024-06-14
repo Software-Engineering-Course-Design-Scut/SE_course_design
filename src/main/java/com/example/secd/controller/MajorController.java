@@ -37,4 +37,9 @@ public class MajorController {
         major.setCollegeID(collegeid);
         return majorService.add(major);
     }
+
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("majorid") Integer id) {
+        return majorService.delete(id);
+    }
 }

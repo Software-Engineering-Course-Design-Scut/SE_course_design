@@ -44,4 +44,9 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
             return Result.fail("书籍添加失败");
         }
     }
+
+    @Override
+    public Result delete(Integer id) {
+        return null;
+    }
 }

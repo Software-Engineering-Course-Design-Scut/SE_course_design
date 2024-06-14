@@ -49,4 +49,9 @@ public class CourseController {
 
         return courseService.add(course);
     }
+
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("courseid") Integer id) {
+        return courseService.delete(id);
+    }
 }

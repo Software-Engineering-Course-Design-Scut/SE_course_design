@@ -17,4 +17,6 @@ public interface IScService extends IService<Sc> {
     Result specific(Integer id);
 
     Result add(Sc sc);
+
+    Result delete(Integer id);
 }

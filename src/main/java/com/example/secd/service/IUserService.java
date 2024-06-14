@@ -17,4 +17,6 @@ public interface IUserService extends IService<User> {
     Result specific(Integer id);
 
     Result add(User user);
+
+    Result delete(Integer id);
 }

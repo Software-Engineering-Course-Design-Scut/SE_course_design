@@ -36,4 +36,9 @@ public class CollegeController {
         college.setCollegeName(collegename);
         return collegeService.add(college);
     }
+
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("collegeid") Integer id) {
+        return collegeService.delete(id);
+    }
 }

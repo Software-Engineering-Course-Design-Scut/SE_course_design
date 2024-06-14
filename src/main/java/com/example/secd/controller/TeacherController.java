@@ -64,4 +64,9 @@ public class TeacherController {
 
         return teacherService.add(teacher);
     }
+
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("teacherid") Integer id) {
+        return teacherService.delete(id);
+    }
 }

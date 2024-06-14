@@ -35,5 +35,8 @@ public class ClassroomController {
         classroom.setClassroomName(classroomname);
         return classroomService.add(classroom);
     }
-
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("classroomid") Integer id) {
+        return classroomService.delete(id);
+    }
 }

@@ -44,4 +44,8 @@ public class StudentcareerplanController {
         studentcareerplan.setCareerPlanAdvice(careerplanadvice);
         return studentcareerplanService.add(studentcareerplan);
     }
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("studentid") Integer id) {
+        return studentcareerplanService.delete(id);
+    }
 }

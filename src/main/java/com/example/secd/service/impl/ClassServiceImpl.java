@@ -47,4 +47,9 @@ public class ClassServiceImpl extends ServiceImpl<ClassMapper, Class> implements
             return Result.fail("书籍添加失败");
         }
     }
+
+    @Override
+    public Result delete(Integer id) {
+        return null;
+    }
 }

@@ -44,4 +44,9 @@ public class BookController {
         return bookService.add(book);
     }
 
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("id") Integer id) {
+        return bookService.delete(id);
+    }
+
 }

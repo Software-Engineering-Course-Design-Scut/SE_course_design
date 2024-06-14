@@ -45,4 +45,9 @@ public class UserController {
         user.setPassword(password);
         return userService.add(user);
     }
+
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("userid") Integer id) {
+        return userService.delete(id);
+    }
 }

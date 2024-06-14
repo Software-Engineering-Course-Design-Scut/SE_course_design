@@ -17,4 +17,6 @@ public interface IStudentcareerplanService extends IService<Studentcareerplan> {
     Result specific(Integer id);
 
     Result add(Studentcareerplan studentcareerplan);
+
+    Result delete(Integer id);
 }

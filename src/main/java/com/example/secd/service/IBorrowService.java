@@ -19,4 +19,6 @@ public interface IBorrowService extends IService<Borrow> {
     Result specific(Integer id);
 
     Result add(Borrow borrow);
+
+    Result delete(Integer id);
 }

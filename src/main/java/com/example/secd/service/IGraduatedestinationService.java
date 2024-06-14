@@ -15,4 +15,6 @@ public interface IGraduatedestinationService extends IService<Graduatedestinatio
     Result point();
 
     Result add(Graduatedestination graduatedestination);
+
+    Result delete(Integer id);
 }

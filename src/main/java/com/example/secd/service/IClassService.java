@@ -15,4 +15,6 @@ public interface IClassService extends IService<Class> {
     Result point();
 
     Result add(Class aclass);
+
+    Result delete(Integer id);
 }

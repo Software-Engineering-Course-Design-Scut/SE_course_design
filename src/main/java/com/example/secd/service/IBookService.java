@@ -20,4 +20,6 @@ public interface IBookService extends IService<Book> {
 
 
     Result add(Book book);
+
+    Result delete(Integer id);
 }

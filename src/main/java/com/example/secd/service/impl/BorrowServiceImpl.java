@@ -59,4 +59,13 @@ public class BorrowServiceImpl extends ServiceImpl<BorrowMapper, Borrow> impleme
             return Result.fail("书籍添加失败");
         }
     }
+
+    public Result delete(Integer id) {
+        int result = borrowMapper.deleteById(id);
+        if (result > 0) {
+            return Result.ok("书籍删除成功");
+        } else {
+            return Result.fail("书籍删除失败");
+        }
+    }
 }

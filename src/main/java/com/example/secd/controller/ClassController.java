@@ -39,4 +39,8 @@ public class ClassController {
         aclass.setMajorID(majorid);
         return classService.add(aclass);
     }
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("classid") Integer id) {
+        return classService.delete(id);
+    }
 }

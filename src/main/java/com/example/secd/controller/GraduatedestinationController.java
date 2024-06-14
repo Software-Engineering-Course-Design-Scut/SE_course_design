@@ -46,4 +46,9 @@ public class GraduatedestinationController {
 
         return graduatedestinationService.add(graduatedestination);
     }
+
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("studentid") Integer id) {
+        return graduatedestinationService.delete(id);
+    }
 }

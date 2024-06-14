@@ -47,4 +47,8 @@ public class ScController {
         sc.setGrade(grade);
         return scService.add(sc);
     }
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("studentid") Integer id) {
+        return scService.delete(id);
+    }
 }

@@ -45,4 +45,9 @@ public class TcController {
         tc.setClassroomID(classroomid);
         return tcService.add(tc);
     }
+
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("teacherid") Integer id) {
+        return tcService.delete(id);
+    }
 }

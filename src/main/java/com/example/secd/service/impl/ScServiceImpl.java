@@ -60,4 +60,9 @@ public class ScServiceImpl extends ServiceImpl<ScMapper, Sc> implements IScServi
             return Result.fail("书籍添加失败");
         }
     }
+
+    @Override
+    public Result delete(Integer id) {
+        return null;
+    }
 }

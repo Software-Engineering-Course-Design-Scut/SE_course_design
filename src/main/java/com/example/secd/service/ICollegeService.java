@@ -15,4 +15,6 @@ public interface ICollegeService extends IService<College> {
     Result point();
 
     Result add(College college);
+
+    Result delete(Integer id);
 }

@@ -11,7 +11,9 @@ import com.example.secd.Result;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -49,4 +51,15 @@ public class ClassroomServiceImpl extends ServiceImpl<ClassroomMapper, Classroom
         }
     }
 
+
+    public Result delete(Integer id) {
+        Map<String, Object> columnMap = new HashMap<>();
+        columnMap.put("ClassroomID", id);
+        int result=classroomMapper.deleteByMap(columnMap);
+        if (result > 0) {
+            return Result.ok("书籍删除成功");
+        } else {
+            return Result.fail("书籍删除失败");
+        }
+    }
 }

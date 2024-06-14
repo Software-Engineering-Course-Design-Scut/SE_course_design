@@ -61,5 +61,14 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements IB
         }
     }
 
+    public Result delete(Integer id) {
+        int result = bookMapper.deleteById(id);
+        if (result > 0) {
+            return Result.ok("书籍删除成功");
+        } else {
+            return Result.fail("书籍删除失败");
+        }
+    }
+
 
 }

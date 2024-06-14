@@ -15,4 +15,6 @@ public interface ICourseService extends IService<Course> {
     Result point();
 
     Result add(Course course);
+
+    Result delete(Integer id);
 }

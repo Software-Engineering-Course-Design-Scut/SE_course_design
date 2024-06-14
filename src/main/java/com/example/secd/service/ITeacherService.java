@@ -17,4 +17,6 @@ public interface ITeacherService extends IService<Teacher> {
     Result specific(Integer id);
 
     Result add(Teacher teacher);
+
+    Result delete(Integer id);
 }

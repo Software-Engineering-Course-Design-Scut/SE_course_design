@@ -17,4 +17,6 @@ public interface ITcService extends IService<Tc> {
     Result specific(Integer id);
 
     Result add(Tc tc);
+
+    Result delete(Integer id);
 }
